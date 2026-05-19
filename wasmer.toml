@@ -1,0 +1,18 @@
+[package]
+name = "wasmer-xhttp-relay"
+version = "0.1.0"
+description = "XHTTP Relay for Wasmer Edge"
+license = "MIT"
+
+[[module]]
+name = "relay"
+source = "src/index.js"
+kind = "js-worker"
+
+[[command]]
+name = "run"
+module = "relay"
+runner = "https://tbd.wasmer.io/winterjs"
+
+[app]
+name = "wasmer-xhttp-relay"
